@@ -3,7 +3,6 @@
 
 <head>
 
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,6 +10,9 @@
 
 <meta name="description"
 content="Technology News, AI Tools, SEO Tips, YouTube Editing, Thumbnail Designing, Instagram Reels Editing and Social Media Services by Telugu Tech Squad.">
+
+<meta name="google-site-verification"
+content="eSxX0LC4k3PpCKlXa-YoB9fDzVnYgcQLZ0GpWy51AQ0" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +40,6 @@ html{
 scroll-behavior:smooth;
 }
 
-  <meta name="google-site-verification" content="eSxX0LC4k3PpCKlXa-YoB9fDzVnYgcQLZ0GpWy51AQ0" />
 body{
 background:#07111f;
 color:#fff;
@@ -82,7 +83,7 @@ justify-content:space-between;
 }
 
 .logo{
-font-size:30px;
+font-size:32px;
 font-weight:800;
 background:linear-gradient(90deg,#00c6ff,#7d5fff);
 -webkit-background-clip:text;
@@ -151,7 +152,7 @@ z-index:2;
 }
 
 .hero-text h1{
-font-size:60px;
+font-size:62px;
 line-height:1.1;
 margin-bottom:20px;
 }
@@ -164,10 +165,11 @@ color:#00c6ff;
 color:#c7d4e8;
 line-height:1.9;
 margin-bottom:30px;
+font-size:17px;
 }
 
 .btn{
-padding:15px 32px;
+padding:15px 34px;
 border:none;
 border-radius:50px;
 background:linear-gradient(90deg,#00c6ff,#7d5fff);
@@ -194,23 +196,26 @@ text-align:center;
 
 .hero-image img{
 width:100%;
-max-width:350px;
+max-width:380px;
 border-radius:30px;
 box-shadow:0 20px 40px rgba(0,198,255,0.25);
 animation:float 5s ease-in-out infinite;
 }
 
 @keyframes float{
+
 0%,100%{
 transform:translateY(0);
 }
+
 50%{
-transform:translateY(-10px);
+transform:translateY(-12px);
 }
+
 }
 
 /* =========================
-SECTION
+SECTIONS
 ========================= */
 
 section{
@@ -223,7 +228,7 @@ margin-bottom:60px;
 }
 
 .section-title h2{
-font-size:45px;
+font-size:44px;
 margin-bottom:10px;
 }
 
@@ -232,10 +237,12 @@ color:#c7d4e8;
 }
 
 /* =========================
-SERVICES
+CARDS
 ========================= */
 
-.services-container{
+.services-container,
+.news-grid,
+.reviews-container{
 max-width:1200px;
 margin:auto;
 display:grid;
@@ -243,20 +250,26 @@ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
 }
 
-.service-card{
+.service-card,
+.news-card,
+.review-card{
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
 padding:35px 25px;
 border-radius:25px;
 text-align:center;
 transition:.4s;
+backdrop-filter:blur(10px);
 }
 
-.service-card:hover{
+.service-card:hover,
+.news-card:hover,
+.review-card:hover{
 transform:translateY(-10px);
 }
 
-.service-icon{
+.service-icon,
+.news-icon{
 width:85px;
 height:85px;
 margin:auto;
@@ -269,102 +282,41 @@ font-size:34px;
 background:linear-gradient(135deg,#00c6ff,#7d5fff);
 }
 
-.service-card h3{
-margin-bottom:15px;
-}
-
-.service-card p{
-color:#c7d4e8;
-line-height:1.8;
-}
-
-/* =========================
-NEWS
-========================= */
-
-.news-grid{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.news-card{
-background:rgba(255,255,255,0.05);
-padding:35px 25px;
-border-radius:25px;
-transition:.4s;
-border:1px solid rgba(255,255,255,0.08);
-}
-
-.news-card:hover{
-transform:translateY(-10px);
-}
-
 .news-icon{
-font-size:50px;
-margin-bottom:20px;
-color:#00c6ff;
+color:#fff;
 }
 
-.news-card p{
+.service-card p,
+.news-card p,
+.review-card p{
 color:#c7d4e8;
 line-height:1.8;
 margin-top:10px;
 }
 
 /* =========================
-SUBSCRIBE
+FORMS
 ========================= */
 
-.newsletter{
+.newsletter,
+.contact-form-container{
 max-width:850px;
 margin:auto;
-padding:60px 30px;
-background:linear-gradient(135deg,#00c6ff22,#7d5fff22);
-border-radius:30px;
-text-align:center;
-border:1px solid rgba(255,255,255,0.08);
-}
-
-.newsletter input{
-width:100%;
-max-width:500px;
-padding:16px;
-border:none;
-outline:none;
-border-radius:50px;
-font-size:15px;
-margin-top:20px;
-}
-
-#message{
-margin-top:15px;
-font-weight:600;
-}
-
-/* =========================
-CLIENT FORM
-========================= */
-
-.contact-form-container{
-max-width:800px;
-margin:auto;
+padding:50px 30px;
 background:rgba(255,255,255,0.05);
-padding:40px 30px;
 border-radius:30px;
 border:1px solid rgba(255,255,255,0.08);
+text-align:center;
+backdrop-filter:blur(10px);
 }
 
-.input-box{
-margin-bottom:20px;
-}
-
+.newsletter input,
 .input-box input,
-.input-box textarea{
+.input-box textarea,
+.input-box select{
 width:100%;
 padding:18px;
+margin-top:15px;
 border:none;
 outline:none;
 border-radius:18px;
@@ -378,52 +330,20 @@ textarea{
 resize:none;
 }
 
+#message,
 #contactMessage{
-margin-top:18px;
+margin-top:15px;
 font-weight:600;
-text-align:center;
 }
 
 /* =========================
 REVIEWS
 ========================= */
 
-.reviews-container{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.review-card{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-padding:35px 25px;
-border-radius:25px;
-transition:.4s;
-text-align:center;
-}
-
-.review-card:hover{
-transform:translateY(-10px);
-}
-
 .stars{
-margin-bottom:20px;
+margin-bottom:15px;
 color:#ffd700;
 font-size:20px;
-}
-
-.review-card p{
-color:#c7d4e8;
-line-height:1.9;
-margin-bottom:20px;
-}
-
-.review-card span{
-color:#00c6ff;
-font-size:14px;
 }
 
 /* =========================
@@ -448,7 +368,7 @@ border-radius:50%;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
 color:#fff;
-font-size:30px;
+font-size:28px;
 text-decoration:none;
 transition:.4s;
 }
@@ -476,8 +396,6 @@ line-height:1.8;
 
 .copyright{
 margin-top:20px;
-font-size:15px;
-font-weight:500;
 background:linear-gradient(90deg,#00c6ff,#7d5fff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -517,7 +435,11 @@ display:none;
 }
 
 .section-title h2{
-font-size:34px;
+font-size:32px;
+}
+
+.hero{
+padding-top:120px;
 }
 
 }
@@ -527,6 +449,8 @@ font-size:34px;
 </head>
 
 <body>
+
+<!-- HEADER -->
 
 <header>
 
@@ -542,7 +466,7 @@ Telugu Tech Squad
 <a href="#services">Services</a>
 <a href="#news">News</a>
 <a href="#subscribe">Subscribe</a>
-<a href="#client-contact">Client Form</a>
+<a href="#client-contact">Contact</a>
 <a href="#reviews">Reviews</a>
 <a href="#social">Social</a>
 
@@ -565,11 +489,7 @@ Latest <span>Tech News</span> & Creative Services
 </h1>
 
 <p>
-
-Technology News, AI Tools, SEO Tips,
-YouTube Editing, Thumbnail Designing
-and Instagram Reels Services.
-
+Technology News, AI Tools, SEO Tips, YouTube Editing, Thumbnail Designing and Social Media Services.
 </p>
 
 <a href="#services" class="btn">
@@ -598,130 +518,34 @@ alt="Telugu Tech Squad">
 
 <h2>Our Services</h2>
 
-<p>
-Professional Digital Services
-</p>
+<p>Professional Digital Services</p>
 
 </div>
 
 <div class="services-container">
 
 <div class="service-card">
-
 <div class="service-icon">
 <i class="fa-brands fa-youtube"></i>
 </div>
-
-<h3>YouTube Video Editing</h3>
-
-<p>
-Short Videos & Long Videos editing with smooth effects and captions.
-</p>
-
+<h3>YouTube Editing</h3>
+<p>Professional YouTube video editing service.</p>
 </div>
 
 <div class="service-card">
-
 <div class="service-icon">
 <i class="fa-solid fa-image"></i>
 </div>
-
-<h3>Thumbnail Designing</h3>
-
-<p>
-High CTR YouTube thumbnails with professional designs.
-</p>
-
+<h3>Thumbnail Design</h3>
+<p>High CTR thumbnail designs for creators.</p>
 </div>
 
 <div class="service-card">
-
 <div class="service-icon">
 <i class="fa-brands fa-instagram"></i>
 </div>
-
-<h3>Instagram Reels Editing</h3>
-
-<p>
-Trending Reels editing with viral transitions and animations.
-</p>
-
-</div>
-
-<div class="service-card">
-
-<div class="service-icon">
-<i class="fa-solid fa-pen-nib"></i>
-</div>
-
-<h3>Posters Designing</h3>
-
-<p>
-Creative poster designs for social media branding.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- NEWS -->
-
-<section id="news">
-
-<div class="section-title">
-
-<h2>Trending Tech News</h2>
-
-<p>
-Latest technology and AI updates
-</p>
-
-</div>
-
-<div class="news-grid">
-
-<div class="news-card">
-
-<div class="news-icon">
-<i class="fa-solid fa-mobile-screen"></i>
-</div>
-
-<h3>Smartphone Launches</h3>
-
-<p>
-Latest flagship phones with AI features and gaming processors.
-</p>
-
-</div>
-
-<div class="news-card">
-
-<div class="news-icon">
-<i class="fa-solid fa-robot"></i>
-</div>
-
-<h3>AI Tools</h3>
-
-<p>
-Trending AI tools for blogging, editing and productivity.
-</p>
-
-</div>
-
-<div class="news-card">
-
-<div class="news-icon">
-<i class="fa-solid fa-chart-line"></i>
-</div>
-
-<h3>SEO Tips</h3>
-
-<p>
-Modern SEO tricks to improve website traffic and rankings.
-</p>
-
+<h3>Instagram Reels</h3>
+<p>Trending reels editing with viral transitions.</p>
 </div>
 
 </div>
@@ -757,7 +581,7 @@ Subscribe
 
 </section>
 
-<!-- CLIENT CONTACT -->
+<!-- CONTACT FORM -->
 
 <section id="client-contact">
 
@@ -765,9 +589,7 @@ Subscribe
 
 <h2>Client Contact Form</h2>
 
-<p>
-Send your project details
-</p>
+<p>Send your project details</p>
 
 </div>
 
@@ -797,11 +619,41 @@ required>
 
 <div class="input-box">
 
-<input
-type="text"
-id="service"
-placeholder="Service Required"
-required>
+<select id="service" required>
+
+<option value="">
+Select Service Required
+</option>
+
+<option value="YouTube Thumbnail Design">
+YouTube Thumbnail Design
+</option>
+
+<option value="YouTube Video Editing">
+YouTube Video Editing
+</option>
+
+<option value="Instagram Reels Editing">
+Instagram Reels Editing
+</option>
+
+<option value="Poster Designing">
+Poster Designing
+</option>
+
+<option value="SEO Service">
+SEO Service
+</option>
+
+<option value="AI Tools Website">
+AI Tools Website
+</option>
+
+<option value="Social Media Management">
+Social Media Management
+</option>
+
+</select>
 
 </div>
 
@@ -839,9 +691,7 @@ Send Message
 
 <h2>Client Reviews</h2>
 
-<p>
-What our clients say about Telugu Tech Squad
-</p>
+<p>What our clients say</p>
 
 </div>
 
@@ -850,66 +700,42 @@ What our clients say about Telugu Tech Squad
 <div class="review-card">
 
 <div class="stars">
-
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-
+★★★★★
 </div>
 
 <p>
-Amazing YouTube thumbnail designs. My CTR improved a lot.
+Amazing thumbnail designs and fast delivery.
 </p>
 
 <h3>Ravi Kumar</h3>
 
-<span>YouTube Creator</span>
-
 </div>
 
 <div class="review-card">
 
 <div class="stars">
-
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-
+★★★★★
 </div>
 
 <p>
-Professional Instagram Reels editing with smooth transitions.
+Professional Instagram reels editing service.
 </p>
 
 <h3>Sneha Reddy</h3>
 
-<span>Content Creator</span>
-
 </div>
 
 <div class="review-card">
 
 <div class="stars">
-
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star-half-stroke"></i>
-
+★★★★★
 </div>
 
 <p>
-Very fast delivery and high-quality YouTube editing services.
+High quality YouTube editing with smooth effects.
 </p>
 
 <h3>Arjun Tech</h3>
-
-<span>Tech YouTuber</span>
 
 </div>
 
@@ -925,9 +751,7 @@ Very fast delivery and high-quality YouTube editing services.
 
 <h2>Follow Us</h2>
 
-<p>
-Connect on all social media platforms
-</p>
+<p>Connect with Telugu Tech Squad</p>
 
 </div>
 
@@ -941,20 +765,12 @@ Connect on all social media platforms
 <i class="fab fa-instagram"></i>
 </a>
 
-<a href="https://www.facebook.com/@telugutechsquad/" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
-
 <a href="https://x.com/@Telugutechsquad" target="_blank">
 <i class="fab fa-x-twitter"></i>
 </a>
 
 <a href="https://t.me/ttsdealsind" target="_blank">
 <i class="fab fa-telegram"></i>
-</a>
-
-<a href="https://www.reddit.com/u/telugu_tech_squad/s/X1CMBYNYk2" target="_blank">
-<i class="fab fa-reddit-alien"></i>
 </a>
 
 </div>
@@ -968,16 +784,11 @@ Connect on all social media platforms
 <h2>Telugu Tech Squad</h2>
 
 <p>
-
-Technology News • AI Tools •
-YouTube Editing • Social Media Services
-
+Technology News • AI Tools • YouTube Editing • Social Media Services
 </p>
 
 <div class="copyright">
-
 © 2026 Telugu Tech Squad. All Rights Reserved.
-
 </div>
 
 </footer>
@@ -987,6 +798,148 @@ YouTube Editing • Social Media Services
 <button id="topBtn">
 <i class="fa-solid fa-arrow-up"></i>
 </button>
+
+<!-- EMAILJS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+/* =========================
+EMAILJS INIT
+========================= */
+
+emailjs.init("gNgU5hOQ5b2ccDEDK");
+
+/* =========================
+SUBSCRIBE FORM
+========================= */
+
+document.getElementById("subscribeBtn").addEventListener("click", function(){
+
+const email = document.getElementById("email").value;
+
+const message = document.getElementById("message");
+
+if(email.trim() === ""){
+
+message.style.color = "red";
+message.innerHTML = "Please enter email address";
+
+return;
+
+}
+
+const templateParams = {
+
+subscriber_email: email
+
+};
+
+emailjs.send(
+"service_zfu4t9t",
+"template_vkdgwaq",
+templateParams
+)
+
+.then(function(){
+
+message.style.color = "#00ff99";
+message.innerHTML = "Subscribed Successfully 🚀";
+
+document.getElementById("email").value = "";
+
+})
+
+.catch(function(error){
+
+message.style.color = "red";
+message.innerHTML = "Subscription Failed";
+
+console.log(error);
+
+});
+
+});
+
+/* =========================
+CONTACT FORM
+========================= */
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const contactMessage = document.getElementById("contactMessage");
+
+const templateParams = {
+
+from_name: document.getElementById("name").value,
+
+from_email: document.getElementById("clientEmail").value,
+
+service: document.getElementById("service").value,
+
+message: document.getElementById("messageBox").value
+
+};
+
+emailjs.send(
+"service_zfu4t9t",
+"template_x35ygnc",
+templateParams
+)
+
+.then(function(){
+
+contactMessage.style.color = "#00ff99";
+contactMessage.innerHTML = "Message Sent Successfully 🚀";
+
+document.getElementById("contactForm").reset();
+
+})
+
+.catch(function(error){
+
+contactMessage.style.color = "red";
+contactMessage.innerHTML = "Failed To Send Message";
+
+console.log(error);
+
+});
+
+});
+
+/* =========================
+TOP BUTTON
+========================= */
+
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+
+if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+
+topBtn.style.display = "block";
+
+}else{
+
+topBtn.style.display = "none";
+
+}
+
+};
+
+topBtn.addEventListener("click", function(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+</script>
 
 </body>
 </html>
