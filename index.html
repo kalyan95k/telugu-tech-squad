@@ -9,14 +9,15 @@
 <title>Telugu Tech Squad</title>
 
 <meta name="description"
-content="Technology News, AI Tools, SEO Tips, YouTube Editing, Thumbnail Designing, Instagram Reels Editing and Social Media Services by Telugu Tech Squad.">
+content="Technology News, AI Tools, SEO Tips, YouTube Editing, Thumbnail Designing and Social Media Services by Telugu Tech Squad.">
 
 <meta name="google-adsense-account" content="ca-pub-8018578296328829">
-  
+
 <meta name="google-site-verification"
-content="eSxX0LC4k3PpCKlXa-YoB9fDzVnYgcQLZ0GpWy51AQ0" />
+content="eSxX0LC4k3PpCKlXa-YoB9fDzVnYgcQLZ0GpWy51AQ0">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
@@ -24,6 +25,10 @@ rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8018578296328829"
+crossorigin="anonymous"></script>
 
 <style>
 
@@ -242,9 +247,7 @@ color:#c7d4e8;
 CARDS
 ========================= */
 
-.services-container,
-.news-grid,
-.reviews-container{
+.services-container{
 max-width:1200px;
 margin:auto;
 display:grid;
@@ -252,9 +255,7 @@ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
 }
 
-.service-card,
-.news-card,
-.review-card{
+.service-card{
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
 padding:35px 25px;
@@ -264,14 +265,11 @@ transition:.4s;
 backdrop-filter:blur(10px);
 }
 
-.service-card:hover,
-.news-card:hover,
-.review-card:hover{
+.service-card:hover{
 transform:translateY(-10px);
 }
 
-.service-icon,
-.news-icon{
+.service-icon{
 width:85px;
 height:85px;
 margin:auto;
@@ -284,16 +282,63 @@ font-size:34px;
 background:linear-gradient(135deg,#00c6ff,#7d5fff);
 }
 
-.news-icon{
-color:#fff;
-}
-
-.service-card p,
-.news-card p,
-.review-card p{
+.service-card p{
 color:#c7d4e8;
 line-height:1.8;
 margin-top:10px;
+}
+
+/* =========================
+NEWS
+========================= */
+
+.news-slider{
+overflow:hidden;
+max-width:1300px;
+margin:auto;
+}
+
+.news-track{
+display:flex;
+gap:25px;
+animation:scrollNews 30s linear infinite;
+width:max-content;
+}
+
+.live-news-card{
+width:320px;
+background:rgba(255,255,255,0.05);
+border-radius:25px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.live-news-card img{
+width:100%;
+height:190px;
+object-fit:cover;
+}
+
+.news-content{
+padding:20px;
+}
+
+.news-content p{
+color:#c7d4e8;
+line-height:1.8;
+margin-top:10px;
+}
+
+@keyframes scrollNews{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
 }
 
 /* =========================
@@ -332,20 +377,48 @@ textarea{
 resize:none;
 }
 
-#message,
-#contactMessage{
-margin-top:15px;
-font-weight:600;
-}
-
 /* =========================
 REVIEWS
 ========================= */
 
-.stars{
-margin-bottom:15px;
+.reviews-slider{
+overflow:hidden;
+max-width:1300px;
+margin:auto;
+}
+
+.reviews-track{
+display:flex;
+gap:25px;
+animation:scrollReviews 35s linear infinite;
+width:max-content;
+}
+
+.review-slide{
+width:280px;
+padding:30px;
+background:rgba(255,255,255,0.05);
+border-radius:25px;
+border:1px solid rgba(255,255,255,0.08);
 color:#ffd700;
-font-size:20px;
+line-height:1.9;
+}
+
+.review-slide h4{
+margin-top:15px;
+color:#fff;
+}
+
+@keyframes scrollReviews{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
 }
 
 /* =========================
@@ -381,6 +454,64 @@ background:linear-gradient(135deg,#00c6ff,#7d5fff);
 }
 
 /* =========================
+WHATSAPP FLOAT
+========================= */
+
+#whatsappFloat{
+position:fixed;
+bottom:90px;
+right:20px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+color:#fff;
+text-decoration:none;
+z-index:9999;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.1);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* =========================
+TOP BUTTON
+========================= */
+
+#topBtn{
+position:fixed;
+right:20px;
+bottom:20px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:linear-gradient(90deg,#00c6ff,#7d5fff);
+color:#fff;
+cursor:pointer;
+display:none;
+z-index:999;
+}
+
+/* =========================
 FOOTER
 ========================= */
 
@@ -401,25 +532,6 @@ margin-top:20px;
 background:linear-gradient(90deg,#00c6ff,#7d5fff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-}
-
-/* =========================
-TOP BUTTON
-========================= */
-
-#topBtn{
-position:fixed;
-right:20px;
-bottom:20px;
-width:50px;
-height:50px;
-border:none;
-border-radius:50%;
-background:linear-gradient(90deg,#00c6ff,#7d5fff);
-color:#fff;
-cursor:pointer;
-display:none;
-z-index:999;
 }
 
 /* =========================
@@ -466,7 +578,7 @@ Telugu Tech Squad
 
 <a href="#home">Home</a>
 <a href="#services">Services</a>
-<a href="#news">News</a>
+<a href="#live-news">News</a>
 <a href="#subscribe">Subscribe</a>
 <a href="#client-contact">Contact</a>
 <a href="#reviews">Reviews</a>
@@ -554,6 +666,85 @@ alt="Telugu Tech Squad">
 
 </section>
 
+<!-- LIVE NEWS -->
+
+<section id="live-news">
+
+<div class="section-title">
+
+<h2>Live Tech Updates</h2>
+
+<p>Latest Trending Technology News</p>
+
+</div>
+
+<div class="news-slider">
+
+<div class="news-track">
+
+<div class="live-news-card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop">
+<div class="news-content">
+<h3>AI Smartphones Trending</h3>
+<p>AI powered smartphones are changing mobile technology.</p>
+</div>
+</div>
+
+<div class="live-news-card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+<div class="news-content">
+<h3>YouTube New Updates</h3>
+<p>Creators are getting advanced monetization features.</p>
+</div>
+</div>
+
+<div class="live-news-card">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+<div class="news-content">
+<h3>Instagram AI Editing</h3>
+<p>AI editing tools are making reels creation faster.</p>
+</div>
+</div>
+
+<div class="live-news-card">
+<img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1200&auto=format&fit=crop">
+<div class="news-content">
+<h3>Google AI Search</h3>
+<p>Google is integrating AI deeply into search experience.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ADS -->
+
+<section id="ads">
+
+<div class="section-title">
+
+<h2>Sponsored Ads</h2>
+
+<p>Advertisement Section</p>
+
+</div>
+
+<div style="max-width:1200px;margin:auto;background:rgba(255,255,255,0.05);padding:30px;border-radius:25px;">
+
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-8018578296328829"
+data-ad-slot="1234567890"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+
+</div>
+
+</section>
+
 <!-- SUBSCRIBE -->
 
 <section id="subscribe">
@@ -583,7 +774,7 @@ Subscribe
 
 </section>
 
-<!-- CONTACT FORM -->
+<!-- CONTACT -->
 
 <section id="client-contact">
 
@@ -691,54 +882,88 @@ Send Message
 
 <div class="section-title">
 
-<h2>Client Reviews</h2>
+<h2>Top Client Reviews</h2>
 
-<p>What our clients say</p>
+<p>Trusted by creators and businesses</p>
 
 </div>
 
-<div class="reviews-container">
+<div class="reviews-slider">
 
-<div class="review-card">
+<div class="reviews-track">
 
-<div class="stars">
-★★★★★
-</div>
-
-<p>
+<div class="review-slide">
+★★★★★ <br>
 Amazing thumbnail designs and fast delivery.
-</p>
-
-<h3>Ravi Kumar</h3>
-
+<h4>Ravi Kumar</h4>
 </div>
 
-<div class="review-card">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
+<div class="review-slide">
+★★★★★ <br>
 Professional Instagram reels editing service.
-</p>
-
-<h3>Sneha Reddy</h3>
-
+<h4>Sneha Reddy</h4>
 </div>
 
-<div class="review-card">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
+<div class="review-slide">
+★★★★★ <br>
 High quality YouTube editing with smooth effects.
-</p>
+<h4>Arjun Tech</h4>
+</div>
 
-<h3>Arjun Tech</h3>
+<div class="review-slide">
+★★★★★ <br>
+Affordable and creative designs.
+<h4>Mahesh</h4>
+</div>
 
+<div class="review-slide">
+★★★★★ <br>
+Best Telugu digital service website.
+<h4>Praveen</h4>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AI TOOLS -->
+
+<section id="ai-tools">
+
+<div class="section-title">
+
+<h2>AI Tools Integration</h2>
+
+<p>Smart AI Features</p>
+
+</div>
+
+<div class="services-container">
+
+<div class="service-card">
+<div class="service-icon">
+<i class="fa-solid fa-robot"></i>
+</div>
+<h3>AI Thumbnail Generator</h3>
+<p>Create smart thumbnail ideas instantly.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">
+<i class="fa-solid fa-microchip"></i>
+</div>
+<h3>AI SEO Generator</h3>
+<p>Generate SEO tags, titles and descriptions.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">
+<i class="fa-solid fa-video"></i>
+</div>
+<h3>AI Script Writer</h3>
+<p>Create YouTube scripts automatically.</p>
 </div>
 
 </div>
@@ -795,6 +1020,12 @@ Technology News • AI Tools • YouTube Editing • Social Media Services
 
 </footer>
 
+<!-- WHATSAPP -->
+
+<a id="whatsappFloat" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
 <!-- TOP BUTTON -->
 
 <button id="topBtn">
@@ -814,7 +1045,7 @@ EMAILJS INIT
 emailjs.init("gNgU5hOQ5b2ccDEDK");
 
 /* =========================
-SUBSCRIBE FORM
+SUBSCRIBE
 ========================= */
 
 document.getElementById("subscribeBtn").addEventListener("click", function(){
@@ -913,6 +1144,107 @@ console.log(error);
 });
 
 /* =========================
+AUTO FILL MESSAGE
+========================= */
+
+const serviceSelect = document.getElementById("service");
+
+const messageBox = document.getElementById("messageBox");
+
+serviceSelect.addEventListener("change", function(){
+
+const service = this.value;
+
+if(service === "YouTube Thumbnail Design"){
+
+messageBox.value =
+"Hi Telugu Tech Squad,\n\nI need high CTR YouTube thumbnail designs.";
+
+}
+
+else if(service === "YouTube Video Editing"){
+
+messageBox.value =
+"Hi Telugu Tech Squad,\n\nI want professional YouTube video editing service.";
+
+}
+
+else if(service === "Instagram Reels Editing"){
+
+messageBox.value =
+"Hi Telugu Tech Squad,\n\nI need trending Instagram reels editing service.";
+
+}
+
+else if(service === "Poster Designing"){
+
+messageBox.value =
+"Hi Telugu Tech Squad,\n\nI want poster designing service.";
+
+}
+
+else if(service === "SEO Service"){
+
+messageBox.value =
+"Hi Telugu Tech Squad,\n\nI need SEO optimization for my website.";
+
+}
+
+else if(service === "AI Tools Website"){
+
+messageBox.value =
+"Hi Telugu Tech Squad,\n\nI want an AI tools website.";
+
+}
+
+else if(service === "Social Media Management"){
+
+messageBox.value =
+"Hi Telugu Tech Squad,\n\nI need social media management service.";
+
+}
+
+});
+
+/* =========================
+WHATSAPP AUTO MESSAGE
+========================= */
+
+function getGreeting(){
+
+const hour = new Date().getHours();
+
+if(hour < 12){
+
+return "Good Morning Sir";
+
+}else if(hour < 17){
+
+return "Good Afternoon Sir";
+
+}else{
+
+return "Good Evening Sir";
+
+}
+
+}
+
+const autoMessage =
+`${getGreeting()} 👋
+
+Hi, I'm seeing your website Telugu Tech Squad.
+
+I want to talk to you regarding your services.
+
+Please reply when available 🚀`;
+
+const whatsappURL =
+`https://wa.me/919581824161?text=${encodeURIComponent(autoMessage)}`;
+
+document.getElementById("whatsappFloat").href = whatsappURL;
+
+/* =========================
 TOP BUTTON
 ========================= */
 
@@ -940,6 +1272,12 @@ behavior:"smooth"
 });
 
 });
+
+/* =========================
+GOOGLE ADS
+========================= */
+
+(adsbygoogle = window.adsbygoogle || []).push({});
 
 </script>
 
